@@ -1,0 +1,25 @@
+.theme-switcher {
+  cursor: pointer;
+  background-color: var(--switcher-background);
+  transition: background-color $animDuration;
+  width: 30px;
+  border-radius: 40%;
+  padding: 6px;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--background-color);
+    transition:
+    background-color $animDuration,
+    transform $animDuration;
+
+    width: 50%;
+    padding-bottom: 50%;
+    border-radius: 50%;
+  }
+}
+
+.theme-switcher--themeblue::after {
+  transform: translateX(100%);
+}

@@ -1,19 +1,82 @@
 <!doctype html>
-<html lang="en">
+<!-- #region head -->
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Dia</title>
+    <title>Air</title>
+    <link
+      rel="icon"
+      href="images/favicon.png"
+      type="image/png"
+    />
+
     <link
       rel="stylesheet"
-      href="./styles/main.scss"
+      href="./styles/Z-index.scss"
     />
+
+    <!-- #region fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- endregion -->
+    <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Dia</h1>
-    <script src="scripts/main.js"></script>
+
+  <!-- endregion -->
+  <body class="page__body">
+    <header class="header">
+      <div class="container header__top">
+        <div class="top-bar">
+          <div class="top-bar__top-container">
+            <a href="#" class="top-bar__logo">
+              <img
+              src="images/logo/air-logo.svg"
+              alt="Air logo"
+              >
+            </a>
+            <div class="theme-switcher top-bar__theme-switcher"></div>
+            <a href="#" class="top-bar__burger icon"></a>
+          </div>
+          <nav class="nav top-bar__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link word-link" href="#about-us">
+                ABOUT US
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link word-link" href="#services">
+                  SERVICES
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link word-link" href="#testimonials">
+                  TESTIMONIALS
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link word-link" href="#contact-us">
+                  CONTACT US
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="word-link top-bar__hire-us">HIRE US</a>
+        </div>
+      </div>
+      <div class="container header__content">
+        <h1 class="header__title">Strategic Agency</h1>
+        <p class="header__text">
+          We believe in the power of bold ideas that can solve business challenges.
+        </p>
+        <button class="header__button button">Learn more</button>
+      </div>
+      <div class="header__slider slider"></div>
+    </header>
   </body>
 </html>

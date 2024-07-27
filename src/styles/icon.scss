@@ -1,0 +1,5 @@
+.icon {
+  @include hover(transform, scale(1.2));
+  display: block;
+  background-size: cover;
+}

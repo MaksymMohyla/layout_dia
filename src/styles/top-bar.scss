@@ -1,0 +1,62 @@
+.top-bar {
+  padding-top: 20px;
+  padding-bottom: 48px;
+
+  @include on-desktop {
+    padding-top: 48px;
+  }
+  
+  display: flex;
+  justify-content: space-between;
+
+  &__top-container {
+    display: flex;
+    gap: 25px;
+
+    @include on-tablet {
+      gap: 35px;
+    }
+  }
+
+  &__logo {
+    height: 28px;
+    @include hover(transform, scale(1.2));
+  }
+
+  &__burger {
+    background-image: url(../images/icons/icon-burger.svg);
+    height: 24px;
+    width: 24px;
+
+    @include on-desktop {
+      display: none;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+
+  &__hire-us {
+    position: relative;
+    @include hover(transform, scale(1.2));
+    color: $white-txt-col;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      background-color: var(--button-color);
+    }
+  }
+}

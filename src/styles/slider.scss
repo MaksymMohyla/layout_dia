@@ -1,0 +1,19 @@
+.slider {
+  @include section-margin-top(48px, 147px, 0);
+
+  background-image: var(--slider-img);
+  max-width: 100%;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 390px;
+
+  @include on-tablet {
+    background-image: var(--slider-img-tabl);
+  }
+
+  @include on-desktop {
+    background-image: var(--slider-img-desk);
+    height: 100%;
+  }
+}

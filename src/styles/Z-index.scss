@@ -1,0 +1,59 @@
+@import 'utils';
+@import 'fonts';
+
+/* #region page */
+
+.page {
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+    padding: 0;
+    background: $c-gray;
+    min-width: 320px;
+    max-width: $body-max-width;
+
+    @include on-desktop {
+      margin: 0 auto;
+    }
+  }
+}
+
+.container {
+  @include content-padding-inline;
+}
+
+.page {
+  --background-color: #2C2C2C;
+  --switcher-background: #008AFF;
+  --button-color: #2060F6;
+  --001-color: #2060F6;
+  --002-color: #2060F6;
+  --003-color: #2060F6;
+  --004-color: #2060F6;
+  --slider-img: url(/src/images/slider/slider-black-phone.png);
+  --slider-img-tabl: url(/src/images/slider/slider-black-tablet.png);
+  --slider-img-desk: url(/src/images/slider/slider-black-desktop.png);
+
+  &--themeblue {
+    --background-color: #008AFF;
+    --switcher-background: #2C2C2C;
+    --button-color: #FF9C8E;
+    --001-color: #56CCF2;
+    --002-color: #FCC91D;
+    --003-color: #15D850;
+    --004-color: #F36363;
+    --slider-img: url(/src/images/slider/slider-blue-phone.png);
+    --slider-img-tabl: url(/src/images/slider/slider-blue-tablet.png);
+    --slider-img-desk: url(/src/images/slider/slider-blue-desktop.png);
+  }
+}
+
+/* #endregion */
+@import 'big-blocks/header';
+@import 'theme-switcher';
+@import 'top-bar';
+@import 'nav';
+@import 'icon';
+@import 'button';
+@import 'slider';

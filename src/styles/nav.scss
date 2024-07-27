@@ -1,0 +1,39 @@
+.nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 38px;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    padding-block: 5px;
+    padding-inline: 10px;
+    position: relative;
+    text-decoration: none;
+    color: $white-txt-col;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 82%;
+      height: 2px;
+      bottom: -8px;
+      background-color: var(--button-color);
+
+      transition: transform $animDuration;
+      transform: scale(0);
+      transform-origin: left;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
+}
