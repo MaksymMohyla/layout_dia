@@ -1,0 +1,76 @@
+.expertise {
+  @include content-padding-block(72px, 128px, 128px);
+  border-radius: $section-border-radius;
+  background-color: #fff;
+
+  &__title {
+    color: $main-txt-col;
+    text-align: center;
+
+    margin-bottom: 56px;
+    font-size: 44px;
+    line-height: 52px;
+
+    @include on-tablet {
+      margin-bottom: 64px;
+      font-size: 52px;
+      line-height: 78px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    @include on-tablet {
+      gap: 72px;
+    }
+
+    @include on-desktop {
+      flex-direction: row;
+      gap: 52px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.expertise-card {
+  @include hover(transform, translateY(-4%));
+  &__img {
+    display: block;
+    margin-bottom: 32px;
+    width: 184px;
+    height: 184px;
+    border-radius: 16px;
+    margin-inline: auto;
+
+    @include on-desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: $main-txt-col;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $gray-txt-col;
+    margin-inline: auto;
+
+    @include on-tablet {
+      width: 50%;
+    }
+
+    @include on-desktop {
+      width: 100%;
+    }
+  }
+}

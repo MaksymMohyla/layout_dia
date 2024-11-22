@@ -1,21 +1,26 @@
 .header {
-  @include page-grid;
+  position: relative;
 
+  @include on-desktop {
+    height: auto;
+  }
   color: $white-txt-col;
   background-color: var(--background-color);
   transition: background-color $animDuration;
+  border-bottom-left-radius: $section-border-radius;
+  border-bottom-right-radius: $section-border-radius;
 
   &__top {
-    grid-column: 1 / -1;
+    @include content-padding-inline;
   }
 
   &__content {
-    grid-column: 1 / -1;
+    @include content-padding-inline;
 
     @include on-desktop {
-      grid-column: 1 / 5;
       padding-top: 168px;
       padding-bottom: 205px;
+      width: 45%;
     }
   }
 
@@ -39,12 +44,30 @@
   }
 
   &__slider {
-    grid-column: 1 / -1;
+    @include section-margin-top(48px, 147px, 0);
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+
+    border-radius: $section-border-radius;
+    height: 390px;
+    width: 100%;
+
+    @include on-tablet {
+      height: 640px;
+    }
 
     @include on-desktop {
-      grid-column: 8 / -1;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      height: 680px;
+      width: 45%;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 }
+
 
 

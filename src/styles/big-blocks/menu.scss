@@ -1,0 +1,15 @@
+.menu {
+  background-color: var(--menu-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-bottom: 48px;
+  transform: translateX(-100%);
+  transition: transform $animDuration;
+
+  width: 202px;
+
+  @include on-tablet {
+    width: 263px;
+  }
+}

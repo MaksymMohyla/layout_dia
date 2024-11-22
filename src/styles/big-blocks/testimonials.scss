@@ -1,0 +1,171 @@
+.testimonials {
+  padding-bottom: 120px;
+
+  @include on-tablet {
+    padding-bottom: 148px;
+  }
+
+  &__title {
+    color: $light-txt-col;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    color: $main-txt-col;
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin-bottom: 56px;
+    }
+
+    @include on-desktop {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include on-desktop {
+    flex-direction: row;
+  }
+}
+
+.testimonials-card {
+  @include content-padding-block(32px, 32px, 32px);
+  @include hover(transform, translateY(-4%));
+  padding-inline: 42px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 16px;
+
+  @include on-tablet {
+    padding-inline: 90px;
+  }
+
+  @include on-desktop {
+    padding-inline: 42px;
+  }
+
+  /* #region top */
+
+  &__background {
+    margin: 0 auto;
+    position: relative;
+    width: 210px;
+    height: 250px;
+  }
+
+  &__rectangle {
+    height: 100px;
+    width: 40px;
+    transform: rotate(30deg);
+    position: absolute;
+    border-radius: 12px;
+    z-index: 0;
+
+    &--1 {
+      top: 12%;
+      left: 25%;
+    }
+
+    &--2 {
+      top: 43%;
+      left: 57%;
+    }
+
+    &--color-1 {
+      background-color: var(--001-color);
+    }
+
+    &--color-2 {
+      background-color: var(--002-color);
+    }
+
+    &--color-3 {
+      background-color: var(--004-color);
+    }
+  }
+
+  &__photo {
+    border-radius: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    z-index: 2;
+  }
+
+  /* #endregion */
+
+  &__content-container {
+    @include on-desktop {
+      height: 162px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__text-content {
+    margin-bottom: 16px;
+    text-align: center;
+    color: $gray-txt-col;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+
+    @include on-desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__apost {
+    margin: 0 auto 8px;
+    width: 24px;
+    height: 24px;
+    background-size: 21px 19px;
+    background-repeat: no-repeat;
+
+    &--1 {
+      background-image: var(--apost-1);
+    }
+
+    &--2 {
+      background-image: var(--apost-2);
+    }
+
+    &--3 {
+      background-image: var(--apost-3);
+    }
+  }
+
+  &__bottom {
+    margin: 0 auto;
+  }
+
+  &__name {
+    color: $main-txt-col;
+    font-weight: 650;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    color: $light-txt-col;
+    letter-spacing: 3px;
+    font-size: 13px;
+    text-align: center;
+  }
+}

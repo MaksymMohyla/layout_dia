@@ -1,0 +1,56 @@
+.form {
+  &__title {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__input {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    color: $white-txt-col;
+    display: block;
+    background-color: transparent;
+    height: 41px;
+    border: none;
+
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all $animDuration;
+    border-bottom: 2px solid #fff;
+
+    &::placeholder {
+      color: rgb(184, 189, 190);
+    }
+
+    @include on-tablet {
+      width: 60%;
+    }
+
+    @include on-desktop {
+      width: 100%;
+    }
+
+    &:hover {
+      border-bottom-color: var(--button-color);
+    }
+
+    &:focus {
+      outline-color: var(--button-color);
+    }
+
+    &--last {
+      margin-bottom: 56px;
+      word-wrap: break-word;
+      overflow: auto;
+
+      @include on-tablet {
+        margin-bottom: 80px;
+      }
+    }
+  }
+}

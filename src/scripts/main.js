@@ -12,3 +12,41 @@ switcher.addEventListener('click', () => {
     switcher.classList.add('theme-switcher--themeblue');
   }
 });
+
+const slider = document.querySelector('.header__slider');
+const slides = document.querySelectorAll('.slider');
+const prevBtn = document.querySelector('.icon--arrow-l');
+const nextBtn = document.querySelector('.icon--arrow-r');
+let slideIndex = 0;
+const slideCount = slides.length;
+
+function showSlide(n) {
+  slides[slideIndex].classList.remove('active');
+
+  slideIndex = (n + slideCount) % slideCount;
+  slides[slideIndex].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+  showSlide(slideIndex - 1);
+});
+
+nextBtn.addEventListener('click', () => {
+  showSlide(slideIndex + 1);
+});
+
+showSlide(slideIndex);
+
+function preventScroll(event) {
+  event.preventDefault();
+}
+
+const buttonClose = document.querySelector('.icon--close');
+const buttonMenu = document.querySelector('.icon--menu');
+const menu = document.querySelector('.menu');
+buttonClose.addEventListener('click', () => {
+  menu.style.transform = 'translateX(-100%)';
+});
+buttonMenu.addEventListener('click', () => {
+  menu.style.transform = 'translateX(0)';
+})

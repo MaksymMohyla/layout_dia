@@ -5,9 +5,23 @@
   color: $white-txt-col;
   background-color: var(--button-color);
   border-radius: 8px;
-  border: none;
+  border-color: var(--button-color);
+  transition:
+  background-color $animDuration,
+  transform $animDuration;
+
+  &:hover {
+    background-color: transparent;
+  }
 
   @include on-tablet {
     width: 264px;
+  }
+
+  &--pre-footer {
+    &:hover {
+      background-color: var(--button-color);
+      transform: scale(1.1);
+    }
   }
 }

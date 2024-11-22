@@ -2,4 +2,55 @@
   @include hover(transform, scale(1.2));
   display: block;
   background-size: cover;
+  cursor: pointer;
+
+  &--menu {
+    background-image: url(../images/icons/icon-burger.svg);
+    height: 24px;
+    width: 24px;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &--arrow-l {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../images/slider/arrow-left.svg);
+  }
+
+  &--arrow-r {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../images/slider/arrow-right.svg);
+  }
+
+  &--close {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/icon-close.svg);
+  }
+
+  &--facebook {
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/icons/icon-facebook.svg);
+  }
+
+  &--twitter {
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/icons/icon-twitter.svg);
+  }
+
+  &--instagram {
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/icons/icon-instagram.svg);
+  }
 }

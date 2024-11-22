@@ -4,6 +4,26 @@
     padding: 0;
     display: flex;
     gap: 38px;
+
+    &--menu {
+      flex-direction: column;
+    }
+
+    &--footer {
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+
+      @include on-tablet {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+      }
+
+      @include on-desktop {
+        min-width: 600px;
+      }
+    }
   }
 
   &__item {
@@ -12,17 +32,19 @@
 
   &__link {
     display: block;
-    padding-block: 5px;
-    padding-inline: 10px;
     position: relative;
     text-decoration: none;
     color: $white-txt-col;
+
+    &--footer {
+      width: fit-content;
+    }
 
     &::after {
       content: '';
       position: absolute;
       display: block;
-      width: 82%;
+      width: 100%;
       height: 2px;
       bottom: -8px;
       background-color: var(--button-color);
@@ -34,6 +56,12 @@
 
     &:hover::after {
       transform: scale(1);
+    }
+  }
+
+  &__link--menu {
+    &::after {
+      background-color: var(--menu-underline-color);
     }
   }
 }
