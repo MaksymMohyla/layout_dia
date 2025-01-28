@@ -56,6 +56,7 @@
   display: flex;
   gap: 16px;
   position: absolute;
+
   @include content-padding-inline;
 
   bottom: 24px;
@@ -86,7 +87,7 @@
     letter-spacing: 3px;
   }
 
-  &__text{
+  &__text {
     font-size: 14px;
     font-weight: 400;
   }

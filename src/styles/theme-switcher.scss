@@ -3,7 +3,7 @@
   background-color: var(--switcher-background);
   transition: background-color $animDuration;
   width: 30px;
-  border-radius: 40%;
+  border-radius: 1rem;
   padding: 6px;
 
   &::after {
@@ -11,8 +11,8 @@
     display: block;
     background-color: var(--background-color);
     transition:
-    background-color $animDuration,
-    transform $animDuration;
+      background-color $animDuration,
+      transform $animDuration;
 
     width: 50%;
     padding-bottom: 50%;
