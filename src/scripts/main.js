@@ -46,7 +46,18 @@ const buttonMenu = document.querySelector('.icon--menu');
 const menu = document.querySelector('.menu');
 buttonClose.addEventListener('click', () => {
   menu.style.transform = 'translateX(-100%)';
+  document.body.style.overflow = 'auto';
 });
 buttonMenu.addEventListener('click', () => {
   menu.style.transform = 'translateX(0)';
-})
+  document.body.style.overflow = 'hidden';
+});
+
+const menuLinks = document.querySelectorAll('.nav__link--menu');
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    menu.style.transform = 'translateX(-100%)';
+    document.body.style.overflow = 'auto';
+  });
+});

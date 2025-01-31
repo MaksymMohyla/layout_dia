@@ -7,9 +7,6 @@
   transform: translateX(-100%);
   transition: transform $animDuration;
 
-  width: 202px;
-
-  @include on-tablet {
-    width: 263px;
-  }
+  width: 100vw;
+  height: 100vh;
 }
