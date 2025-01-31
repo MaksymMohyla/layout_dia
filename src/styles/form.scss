@@ -40,7 +40,8 @@
     }
 
     &:focus {
-      outline-color: var(--button-color);
+      border-bottom-color: var(--button-color);
+      outline: none;
     }
 
     &--last {
